@@ -23,10 +23,10 @@ class Img
           ones.each do |found_row_number, found_col_number|
 
             if row_number == found_row_number && col_number == found_col_number
-              @pic[row_number -1][col_number] = 1 unless row_number == 0 #up
-              @pic[row_number +1][col_number] = 1 unless row_number >= 3 #down
-              @pic[row_number][col_number -1] = 1 unless col_number == 0 #left
-              @pic[row_number][col_number +1] = 1 unless col_number >= 3 #right
+              @pic[row_number -1][col_number] = 1 unless row_number == 0 
+              @pic[row_number +1][col_number] = 1 unless row_number >= 3 
+              @pic[row_number][col_number -1] = 1 unless col_number == 0 
+              @pic[row_number][col_number +1] = 1 unless col_number >= 3 
             end
           end
         end
@@ -47,10 +47,10 @@ img = Img.new([
 [0, 0, 0, 0]
 ])
 
-#original output
+# original 
 img.output_image
 puts
 img.blur!
 
-#blurred output
+# blurred 
 img.output_image
